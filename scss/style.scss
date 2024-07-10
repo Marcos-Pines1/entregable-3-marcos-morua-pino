@@ -1,0 +1,24 @@
+// Main config
+
+@import "config/_variables.scss";
+@import "config/_reset.scss";
+@import "config/_boostrap.scss";
+@import "config/_reutilizable.scss";
+
+// Compontentes 
+
+@import "componentes/_componentes.scss";
+@import "componentes/mixins";
+
+// Layout
+
+@import "layout/_header.scss";
+@import "layout/_main-index.scss";
+@import "layout/_info-index.scss";
+@import "layout/_shop-index.scss";
+@import "layout/_footer.scss";
+@import "componentes/animation";
+
+// media 
+
+@import "componentes/_media.scss";
