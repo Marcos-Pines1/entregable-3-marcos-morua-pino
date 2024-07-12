@@ -255,15 +255,17 @@ label {
   transition: background-color 0.4s;
   z-index: 100;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 0;
 }
 .header__nav .nav__bar {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
   align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
   padding: 5px 20px;
 }
 .header__nav .nav__bar .nav__logo {
@@ -286,8 +288,9 @@ label {
 .header__nav .nav__bar .nav__container .nav__list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 2.5rem;
   height: 90%;
 }
@@ -390,6 +393,326 @@ label {
   100% {
     transform: translateY(-1rem);
     opacity: 0;
+  }
+}
+/*=======================================================================================================
+=                                           Media Query                                                 =
+========================================================================================================*/
+/*--------------------- MAX width ---------------------*/
+/*==================== For small devices ==================*/
+@media screen and (max-width: 340px) {
+  .concept__front__image {
+    right: 20px;
+  }
+  .concept__back__image {
+    right: 0;
+  }
+  .sponsor__container {
+    grid-template-columns: repeat(2, 40%);
+    padding: 20px 20px;
+  }
+  .footer__links {
+    margin: auto;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 5px rgba(10, 10, 10, 0.4666666667);
+  }
+  tr td,
+  tr th {
+    border: none;
+    padding: 10px 15px;
+  }
+}
+/*--------------------- MIN width ---------------------*/
+@media screen and (min-width: 340px) {
+  .sponsor__container {
+    padding: 20px 20px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .info__video__iframe {
+    width: 400px;
+    height: 250px;
+  }
+}
+/*==================== For medium devices ==================*/
+@media screen and (min-width: 768px) {
+  /*==================== Header =====================*/
+  .header__nav .nav__bar {
+    padding: 5px 40px;
+  }
+  .header__nav .nav__bar .nav__container {
+    position: static;
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+    margin-top: 5px;
+  }
+  .header__nav .nav__bar .nav__container .nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+  }
+  .nav-toggle,
+  .close__button {
+    display: none;
+    opacity: 0;
+  }
+  /*============== Index Page Media =================*/
+  /*-------------- home container --------------*/
+  .home__container {
+    position: relative;
+  }
+  .home__product__img {
+    width: 60%;
+  }
+  .float__social {
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    flex-direction: column;
+  }
+  .text__float__social {
+    rotate: 90deg;
+  }
+  .text__float__social::after {
+    left: 110%;
+    top: 50%;
+  }
+  .float__social ul {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  /*-------------- info styles  -----------------*/
+  .info__container {
+    justify-content: space-between;
+  }
+  /*-------------- concept styles --------------*/
+  .concept__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 80px 0;
+  }
+  .concept__text {
+    margin-top: 0;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .concept__relative {
+    flex: 60%;
+    max-width: 60%;
+    height: 100%;
+  }
+  .concept__front__image,
+  .concept__back__image {
+    top: 0;
+    right: 0;
+  }
+  /*---------------------------- LCD styles ----------------------------*/
+  /* lcd texts */
+  .paragraph__button {
+    width: 40%;
+    display: none;
+  }
+  .lcd__info__container .subtitle__h2,
+  .lcd__info__container .paragraph {
+    width: 60%;
+  }
+  /* lcd images */
+  .interactive__images__container {
+    height: 0;
+  }
+  /*-------------- Sponsor styles  -----------------*/
+  .sponsor__container {
+    grid-template-columns: repeat(4, 15%);
+  }
+  /*============== Info Page Media =================*/
+  /*---------------- info iframe ----------------*/
+  .video__info {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0;
+  }
+  .info__video {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+  .info__iframe {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+  .info__video__iframe {
+    width: 350px;
+    height: 200px;
+  }
+  /*-------------- Performance Styles --------------*/
+  .performance__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 60px 20px;
+  }
+  .performance-img {
+    flex: 0 0 50%;
+    max-width: 500px;
+  }
+  .performance__info__container {
+    flex: 0 0 50%;
+    max-width: 40%;
+  }
+  /*--------------- table styles ---------------*/
+  .table__title__body,
+  .table__foot__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .table__foot__info {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  /*================= Footer =================*/
+  .footer__nav {
+    grid-template-columns: 300px 300px;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .footer__logo {
+    width: 100%;
+  }
+  .footer__logo__img {
+    width: 20%;
+  }
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 6rem;
+    justify-content: space-evenly;
+  }
+}
+/*==================== For Large devices ==================*/
+@media screen and (min-width: 992px) {
+  .info__video {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding-left: 20px;
+  }
+  .info__iframe {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+  .info__video__iframe {
+    width: 450px;
+    height: 300px;
+  }
+  /*-------------- Performance Styles --------------*/
+  .performance__section {
+    gap: 5rem;
+  }
+  .performance-imgs img {
+    width: 450px;
+  }
+  /*================== shop page styles ====================*/
+  /*---------------- form styles ----------------*/
+  .form__container {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 1.5rem;
+  }
+  .contact__mail {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+  .shop__product {
+    flex: 0 0 40%;
+    max-width: 40%;
+    gap: 2rem;
+  }
+  /* inputs containers */
+  .contact-form .contact__group {
+    flex-direction: row;
+  }
+  .contact-form .contact__group .contact__box {
+    max-width: 45%;
+    flex: 0 0 45%;
+  }
+  /*----------------- shop styles -------------------*/
+  /* shop layout */
+  .shop__info {
+    background-color: var(--shop--background);
+    display: grid;
+    gap: 2rem;
+    padding: 40px 30px 50px;
+  }
+  .product__container {
+    padding: 40px 10px;
+    background-color: var(--product-background);
+  }
+  .img__product {
+    margin: auto;
+    width: 90%;
+  }
+  /* shop text */
+  .shop__paragraph__info {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  .product__title {
+    font-size: 2.2rem;
+  }
+  /* Scroll up */
+  .scrollup {
+    right: 3rem;
+  }
+}
+@media screen and (min-width: 1150px) {
+  /*============== Index Page Media =================*/
+  .main__text {
+    width: 100%;
+  }
+  /*============== Info Page Media =================*/
+  .info__video__iframe {
+    width: 600px;
+    height: 400px;
+  }
+  /*-------------- Performance Styles --------------*/
+  .performance-img {
+    flex: 0 0 100%;
+  }
+  .performance-imgs img {
+    width: 550px;
+  }
+  .performance__info__container .paragraph__button {
+    width: 80%;
+  }
+  /*--------------- table styles ---------------*/
+  .table__title__body,
+  .table__foot__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .table__info__body {
+    font-size: 0.9rem;
+  }
+  .table__foot__info {
+    font-size: 0.7rem;
+    font-weight: normal;
   }
 }
 

@@ -10,16 +10,12 @@
   transition: background-color 0.4s;
   z-index: 100;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include dplay(center, space-between, 0);
 
   .nav__bar {
     position: relative;
-    display: flex;
-    justify-content: space-between;
+    @include dplay(center, space-between, 0);
     width: 100%;
-    align-items: center;
     padding: 5px 20px;
 
     .nav__logo{
@@ -44,9 +40,7 @@
       .nav__list {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
+        @include dplay(center, space-between, 2.5rem);
         height: 90%;
 
         .nav__item::after {
