@@ -40,7 +40,7 @@
       .nav__list {
         display: flex;
         flex-direction: column;
-        @include dplay(center, space-between, 2.5rem);
+        @include dplay(center, center, 2.5rem);
         height: 90%;
 
         .nav__item::after {
