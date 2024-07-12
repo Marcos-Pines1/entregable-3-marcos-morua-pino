@@ -8,17 +8,24 @@
 
 @media screen and (max-width: 340px) {
 
-  .concept__front__image {
-    right: 20px;
+  .concep__section {
+
+    .concept__container {
+      .concept__front__image {
+        right: 20px;
+      }
+
+      .concept__back__image {
+        right: 0;
+      }
+    }
   }
 
-  .concept__back__image {
-    right: 0;
-  }
-
-  .sponsor__container {
-    grid-template-columns: repeat(2, 40%);
-    padding: 20px 20px;
+  .sponsor__section {
+    .sponsor__container {
+      grid-template-columns: repeat(2, 40%);
+      padding: 20px 20px;
+    }
   }
   
   .footer{
@@ -50,8 +57,10 @@
 
 @media screen and (min-width: 340px) {
 
-  .sponsor__container {
-    padding: 20px 20px;
+  .sponsor__section {
+    .sponsor__container {
+      padding: 20px 20px;
+    }
   }
 
 }
@@ -103,94 +112,105 @@
 
   .home__container {
     position: relative;
-  }
 
-  .home__product__img {
-    width: 60%;
-  }
+    .home__product__img {
+      width: 60%;
+    }
 
-  .float__social {
-    position: absolute;
-    top: 40%;
-    left: 20px;
-    flex-direction: column;
-  }
+    .float__social {
+      position: absolute;
+      top: 40%;
+      left: 20px;
+      flex-direction: column;
 
-  .text__float__social {
-    rotate: 90deg;
-  }
+      .text__float__social {
+        rotate: 90deg;
 
-  .text__float__social::after {
-    left: 110%;
-    top: 50%;
-  }
+        &::after {
+          left: 110%;
+          top: 50%;
+        }
+      }
 
-  .float__social ul {
-    margin-top: 10px;
-    flex-direction: column;
-    gap: 0.2rem;
-    justify-content: center;
-    align-items: center;
+      ul {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 0.2rem;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 
   // info styles
-
-  .info__container {
-    justify-content: space-between;
+  
+  .info__section{
+    .info__container {
+      justify-content: space-between;
+    }
   }
 
   // concept styles 
 
-  .concept__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    padding: 80px 0;
+  .concep__section {
+
+    .concept__container {
+      @include dplay(center,center, 3rem);
+      flex-direction: row;
+      padding: 80px 0;
+
+      .concept__text {
+        margin-top: 0;
+        flex: 0 0 40%;
+        max-width: 40%;
+      }
+
+      .concept__relative {
+        flex: 60%;
+        max-width: 60%;
+        height: 100%;
+
+        .concept__front__image,
+        .concept__back__image {
+          top: 0;
+          right: 0;
+        }
+      }
+    }
   }
 
-  .concept__text {
-    margin-top: 0;
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
-
-  .concept__relative {
-    flex: 60%;
-    max-width: 60%;
-    height: 100%;
-  }
-
-  .concept__front__image,
-  .concept__back__image {
-    top: 0;
-    right: 0;
-  }
-
-  // LCD styles 
-
-  // lcd texts 
-  .paragraph__button {
-    width: 40%;
-    display: none;
-  }
-
-  .lcd__info__container .subtitle__h2,
-  .lcd__info__container .paragraph {
-    width: 60%;
-  }
 
   // lcd images
+  .lcd__section{
+    .lcd__info__container{
 
-  .interactive__images__container {
-    height: 0;
+      .subtitle__h2,
+      .paragraph {
+        width: 60%;
+      }
+
+      .lcd__items__container{
+        .interactive__text__container{
+          .paragraph__button {
+            width: 40%;
+            display: none;
+          }
+        }
+
+        .interactive__images__container {
+          height: 0;
+        }
+      }
+    }
   }
+
 
   // Sponsor styles 
 
-  .sponsor__container {
-    grid-template-columns: repeat(4, 15%);
+  .sponsor__section {
+    .sponsor__container {
+      grid-template-columns: repeat(4, 15%);
+    }
   }
 
   /*============== Info Page Media =================*/
@@ -386,9 +406,12 @@
 @media screen and (min-width: 1150px) {
 
   /*============== Index Page Media =================*/
-
-  .main__text {
-    width: 100%;
+  .home__section {
+    .home__container{
+      .main__text {
+      width: 100%;
+      }
+    }
   }
 
   /*============== Info Page Media =================*/

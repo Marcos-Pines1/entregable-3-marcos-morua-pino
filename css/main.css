@@ -181,7 +181,7 @@ label {
   background: transparent;
   cursor: pointer;
   outline: none;
-  color: var(--main-color);
+  color: #BE60F4;
   font-size: 1rem;
 }
 
@@ -190,8 +190,8 @@ label {
   height: 48px;
   margin-top: 20px;
   border-radius: 6px;
-  color: var(--main-text-color);
-  background-color: var(--form-input-border);
+  color: #F1F1F1;
+  background-color: #2A2A2A;
   border: none;
   font-size: 1.1rem;
   cursor: pointer;
@@ -213,7 +213,7 @@ label {
 .social__icons:hover,
 .social__home__links i:hover,
 .link__footer:hover {
-  color: var(--main-color);
+  color: #BE60F4;
 }
 
 /*=============== SCROLL UP ===============*/
@@ -221,7 +221,7 @@ label {
   position: fixed;
   right: 1rem;
   bottom: -50%;
-  background-color: var(--form-background);
+  background-color: #0A0A0A;
   display: inline;
   padding: 6px 13px;
   font-size: 1.25rem;
@@ -323,6 +323,208 @@ label {
 .nav-toggle {
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/*=================== index Page styles ==================*/
+/*------------- home styles -----------------*/
+.home__section {
+  background-image: url("../assets/hero-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.home__section .home__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-direction: column;
+  padding: 15px 10px 40px;
+}
+.home__section .home__container .main__text {
+  text-align: center;
+  width: 100%;
+}
+.home__section .home__container .float__social,
+.home__section .home__container .float__social ul {
+  display: flex;
+  gap: 2.5rem;
+}
+.home__section .home__container .float__social .text__float__social {
+  position: relative;
+  font-size: 1.2rem;
+}
+.home__section .home__container .float__social .text__float__social .social__home__links,
+.home__section .home__container .float__social .text__float__social .social__home__links i {
+  font-size: 1.2rem;
+  transition: 0.4s;
+}
+.home__section .home__container .float__social .text__float__social::after {
+  content: "";
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  width: 1.6rem;
+  height: 2px;
+  background-color: #F1F1F1;
+  display: block;
+}
+.home__section .home__container .float__social ul {
+  gap: 0.5rem;
+}
+
+/*---------------- info styles ----------------*/
+.info__section {
+  background-color: #101010;
+}
+.info__section .info__container {
+  gap: 2rem;
+}
+.info__section .info__container .info__container__text {
+  margin: auto;
+  gap: 0.7rem;
+}
+.info__section .info__container .subtitle__h3 {
+  margin: 15px 0;
+}
+.info__section .info__container .info__container__img {
+  margin: auto;
+}
+
+/*---------------- concept styles ----------------*/
+.concep__section {
+  height: 100%;
+  background-image: url("../assets/home-Concep-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.concep__section .concept__container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.concep__section .concept__container .concept__text {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.concep__section .concept__container .concept__relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.concep__section .concept__container .concept__relative img {
+  width: 100%;
+}
+.concep__section .concept__container .concept__relative .concept__front__image {
+  position: relative;
+  bottom: 40px;
+  right: 50px;
+  z-index: 2;
+}
+.concep__section .concept__container .concept__relative .concept__back__image {
+  z-index: 1;
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+}
+
+/*---------------- lcd styles ----------------*/
+.lcd__section {
+  padding: 60px 10px;
+  position: relative;
+}
+.lcd__section .lcd__info__container .subtitle__h2,
+.lcd__section .lcd__info__container .paragraph {
+  width: 100%;
+}
+.lcd__section .lcd__info__container .lcd__items__container {
+  display: flex;
+  flex-direction: column;
+  /* lcd images */
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__text__container {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__text__container .fa-caret-right {
+  transition: 0.4s;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__text__container.active .fa-caret-right {
+  transform: rotate(90deg);
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__text__container .paragraph__button {
+  width: 100%;
+  display: none;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__text__container.active .paragraph__button {
+  padding-top: 20px;
+  display: block;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__images__container {
+  height: 100px;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__images__container .active-imgs {
+  pointer-events: none;
+  position: absolute;
+  left: 52%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__images__container .active-imgs > .lcd-img-1 {
+  position: relative;
+  left: 52%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__images__container .active-imgs > img {
+  position: absolute;
+  left: 52%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  width: 100%;
+  opacity: 0;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__images__container .active-imgs > .lcd-img-video4 {
+  position: absolute;
+  transform: translate(-17%, -64.1%) rotate(-40deg) scale(0.18);
+  top: 50%;
+  left: 52%;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__images__container .active-imgs > .lcd-img-video5 {
+  position: absolute;
+  transform: translate(-17%, -64.1%) rotate(-40deg) scale(0.18);
+  top: 50%;
+  left: 52%;
+}
+.lcd__section .lcd__info__container .lcd__items__container .interactive__images__container .active-imgs > img.active {
+  opacity: 1;
+}
+
+/*---------------- sponsor styles----------------*/
+.sponsor__section {
+  background-color: #161616;
+  padding: 40px 0;
+}
+.sponsor__section .sponsor__container {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 1rem 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+.sponsor__section .sponsor__container .sponsor__img {
+  width: 100%;
+  transition: 0.4s;
+}
+.sponsor__section .sponsor__container .sponsor__img:hover {
+  transform: scale(1.1);
 }
 
 /*=================== footer styles =================*/
@@ -464,13 +666,13 @@ label {
 =                                           Media Query                                                 =
 ========================================================================================================*/
 @media screen and (max-width: 340px) {
-  .concept__front__image {
+  .concep__section .concept__container .concept__front__image {
     right: 20px;
   }
-  .concept__back__image {
+  .concep__section .concept__container .concept__back__image {
     right: 0;
   }
-  .sponsor__container {
+  .sponsor__section .sponsor__container {
     grid-template-columns: repeat(2, 40%);
     padding: 20px 20px;
   }
@@ -492,7 +694,7 @@ label {
   }
 }
 @media screen and (min-width: 340px) {
-  .sponsor__container {
+  .sponsor__section .sponsor__container {
     padding: 20px 20px;
   }
 }
@@ -530,67 +732,67 @@ label {
   .home__container {
     position: relative;
   }
-  .home__product__img {
+  .home__container .home__product__img {
     width: 60%;
   }
-  .float__social {
+  .home__container .float__social {
     position: absolute;
     top: 40%;
     left: 20px;
     flex-direction: column;
   }
-  .text__float__social {
+  .home__container .float__social .text__float__social {
     rotate: 90deg;
   }
-  .text__float__social::after {
+  .home__container .float__social .text__float__social::after {
     left: 110%;
     top: 50%;
   }
-  .float__social ul {
+  .home__container .float__social ul {
     margin-top: 10px;
     flex-direction: column;
     gap: 0.2rem;
     justify-content: center;
     align-items: center;
   }
-  .info__container {
+  .info__section .info__container {
     justify-content: space-between;
   }
-  .concept__container {
+  .concep__section .concept__container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 3rem;
+    flex-direction: row;
     padding: 80px 0;
   }
-  .concept__text {
+  .concep__section .concept__container .concept__text {
     margin-top: 0;
     flex: 0 0 40%;
     max-width: 40%;
   }
-  .concept__relative {
+  .concep__section .concept__container .concept__relative {
     flex: 60%;
     max-width: 60%;
     height: 100%;
   }
-  .concept__front__image,
-  .concept__back__image {
+  .concep__section .concept__container .concept__relative .concept__front__image,
+  .concep__section .concept__container .concept__relative .concept__back__image {
     top: 0;
     right: 0;
   }
-  .paragraph__button {
+  .lcd__section .lcd__info__container .subtitle__h2,
+  .lcd__section .lcd__info__container .paragraph {
+    width: 60%;
+  }
+  .lcd__section .lcd__info__container .lcd__items__container .interactive__text__container .paragraph__button {
     width: 40%;
     display: none;
   }
-  .lcd__info__container .subtitle__h2,
-  .lcd__info__container .paragraph {
-    width: 60%;
-  }
-  .interactive__images__container {
+  .lcd__section .lcd__info__container .lcd__items__container .interactive__images__container {
     height: 0;
   }
-  .sponsor__container {
+  .sponsor__section .sponsor__container {
     grid-template-columns: repeat(4, 15%);
   }
   /*============== Info Page Media =================*/
@@ -726,7 +928,7 @@ label {
 }
 @media screen and (min-width: 1150px) {
   /*============== Index Page Media =================*/
-  .main__text {
+  .home__section .home__container .main__text {
     width: 100%;
   }
   /*============== Info Page Media =================*/

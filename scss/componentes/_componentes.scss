@@ -38,7 +38,7 @@
   background: transparent;
   cursor: pointer;
   outline: none;
-  color: var(--main-color);
+  color: $main-color;
   font-size: 1rem;
 }
 
@@ -47,8 +47,8 @@
   height: 48px;
   margin-top: 20px;
   border-radius: 6px;
-  color: var(--main-text-color);
-  background-color: var(--form-input-border);
+  color: $main-text-color;
+  background-color: $form-input-border;
   border: none;
   font-size: 1.1rem;
   cursor: pointer;
@@ -71,7 +71,7 @@
 .social__icons:hover,
 .social__home__links i:hover,
 .link__footer:hover {
-  color: var(--main-color);
+  color:$main-color;
 }
 
 /*=============== SCROLL UP ===============*/
@@ -80,7 +80,7 @@
   position: fixed;
   right: 1rem;
   bottom: -50%;
-  background-color: var(--form-background);
+  background-color: $form-background;
   display: inline;
   padding: 6px 13px;
   font-size: 1.25rem;
