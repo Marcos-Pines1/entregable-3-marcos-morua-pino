@@ -1,13 +1,9 @@
-/*=============== VARIABLES SCSS ===============*/
-/*-------- Background colors --------*/
-/*-------- Border colors --------*/
-/*-------- text color --------*/
-/*-------- form colors --------*/
-/*-------- scroll bar colors --------*/
-/*-------- font size --------*/
-/*-------- font weight --------*/
-/* height nav */
-/*========== VARIABLES SASS ===========*/
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/Inter/Inter.ttf");
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
 *,
 *::before,
 *::after {
@@ -137,7 +133,7 @@ label {
 }
 
 .subtitle__h4 {
-  font-size: var(--h4);
+  font-size: 1.4rem;
   font-weight: normal;
 }
 
@@ -329,6 +325,75 @@ label {
   cursor: pointer;
 }
 
+/*=================== footer styles =================*/
+.footer {
+  background-color: #161616;
+  border-top: 5px solid rgba(16, 16, 16, 0.5);
+}
+.footer .footer__nav {
+  padding: 30px 30px;
+  grid-template-columns: 1fr;
+  gap: 4rem 5rem;
+}
+.footer .footer__nav .footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 5rem;
+  flex-direction: column;
+  width: 200px;
+  margin: auto;
+}
+.footer .footer__nav .footer__logo .footer__logo__img {
+  width: 40%;
+}
+.footer .footer__nav .footer__logo .footer__social__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer .footer__nav .footer__logo .footer__social__links .social__icons {
+  font-size: 1.5rem;
+}
+.footer .footer__nav .footer__links {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 4rem;
+  justify-content: space-evenly;
+}
+.footer .footer__nav .footer__links .footer__links__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer .footer__nav .footer__links .footer__links__list .list__title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.footer .footer__nav .footer__links .footer__links__list .link__footer {
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.footer .footer__copy {
+  padding: 10px;
+  text-align: center;
+}
+.footer .footer__copy .footer__copy__text {
+  font-size: 0.65rem;
+  color: #A0A0A0;
+}
+
+/* Main styles scss */
+.social__icons:hover,
+.social__home__links i:hover,
+.link__footer:hover {
+  color: #BE60F4;
+}
+
 /* animation icons */
 .animation-icon:hover {
   -webkit-animation: aicon 1.3s ease-in infinite;
@@ -398,8 +463,6 @@ label {
 /*=======================================================================================================
 =                                           Media Query                                                 =
 ========================================================================================================*/
-/*--------------------- MAX width ---------------------*/
-/*==================== For small devices ==================*/
 @media screen and (max-width: 340px) {
   .concept__front__image {
     right: 20px;
@@ -411,7 +474,7 @@ label {
     grid-template-columns: repeat(2, 40%);
     padding: 20px 20px;
   }
-  .footer__links {
+  .footer .footer__nav .footer__links {
     margin: auto;
     grid-template-columns: 1fr;
   }
@@ -428,7 +491,6 @@ label {
     padding: 10px 15px;
   }
 }
-/*--------------------- MIN width ---------------------*/
 @media screen and (min-width: 340px) {
   .sponsor__container {
     padding: 20px 20px;
@@ -440,7 +502,6 @@ label {
     height: 250px;
   }
 }
-/*==================== For medium devices ==================*/
 @media screen and (min-width: 768px) {
   /*==================== Header =====================*/
   .header__nav .nav__bar {
@@ -466,7 +527,6 @@ label {
     opacity: 0;
   }
   /*============== Index Page Media =================*/
-  /*-------------- home container --------------*/
   .home__container {
     position: relative;
   }
@@ -493,11 +553,9 @@ label {
     justify-content: center;
     align-items: center;
   }
-  /*-------------- info styles  -----------------*/
   .info__container {
     justify-content: space-between;
   }
-  /*-------------- concept styles --------------*/
   .concept__container {
     display: flex;
     flex-direction: row;
@@ -521,8 +579,6 @@ label {
     top: 0;
     right: 0;
   }
-  /*---------------------------- LCD styles ----------------------------*/
-  /* lcd texts */
   .paragraph__button {
     width: 40%;
     display: none;
@@ -531,16 +587,13 @@ label {
   .lcd__info__container .paragraph {
     width: 60%;
   }
-  /* lcd images */
   .interactive__images__container {
     height: 0;
   }
-  /*-------------- Sponsor styles  -----------------*/
   .sponsor__container {
     grid-template-columns: repeat(4, 15%);
   }
   /*============== Info Page Media =================*/
-  /*---------------- info iframe ----------------*/
   .video__info {
     display: flex;
     flex-direction: row;
@@ -558,7 +611,6 @@ label {
     width: 350px;
     height: 200px;
   }
-  /*-------------- Performance Styles --------------*/
   .performance__section {
     display: flex;
     flex-direction: row;
@@ -575,7 +627,6 @@ label {
     flex: 0 0 50%;
     max-width: 40%;
   }
-  /*--------------- table styles ---------------*/
   .table__title__body,
   .table__foot__title {
     font-size: 1.2rem;
@@ -586,25 +637,24 @@ label {
     font-weight: normal;
   }
   /*================= Footer =================*/
-  .footer__nav {
+  .footer .footer__nav {
     grid-template-columns: 300px 300px;
     padding: 20px;
     justify-content: space-between;
   }
-  .footer__logo {
+  .footer .footer__nav .footer__logo {
     width: 100%;
   }
-  .footer__logo__img {
+  .footer .footer__nav .footer__logo .footer__logo__img {
     width: 20%;
   }
-  .footer__links {
+  .footer .footer__nav .footer__links {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     gap: 6rem;
     justify-content: space-evenly;
   }
 }
-/*==================== For Large devices ==================*/
 @media screen and (min-width: 992px) {
   .info__video {
     flex: 0 0 45%;
@@ -619,7 +669,6 @@ label {
     width: 450px;
     height: 300px;
   }
-  /*-------------- Performance Styles --------------*/
   .performance__section {
     gap: 5rem;
   }
@@ -627,7 +676,6 @@ label {
     width: 450px;
   }
   /*================== shop page styles ====================*/
-  /*---------------- form styles ----------------*/
   .form__container {
     flex-direction: row;
     align-items: start;
@@ -644,7 +692,6 @@ label {
     max-width: 40%;
     gap: 2rem;
   }
-  /* inputs containers */
   .contact-form .contact__group {
     flex-direction: row;
   }
@@ -652,8 +699,6 @@ label {
     max-width: 45%;
     flex: 0 0 45%;
   }
-  /*----------------- shop styles -------------------*/
-  /* shop layout */
   .shop__info {
     background-color: var(--shop--background);
     display: grid;
@@ -668,7 +713,6 @@ label {
     margin: auto;
     width: 90%;
   }
-  /* shop text */
   .shop__paragraph__info {
     font-size: 0.9rem;
     margin-bottom: 15px;
@@ -676,7 +720,6 @@ label {
   .product__title {
     font-size: 2.2rem;
   }
-  /* Scroll up */
   .scrollup {
     right: 3rem;
   }
@@ -691,7 +734,6 @@ label {
     width: 600px;
     height: 400px;
   }
-  /*-------------- Performance Styles --------------*/
   .performance-img {
     flex: 0 0 100%;
   }
@@ -701,7 +743,6 @@ label {
   .performance__info__container .paragraph__button {
     width: 80%;
   }
-  /*--------------- table styles ---------------*/
   .table__title__body,
   .table__foot__title {
     font-size: 1.2rem;

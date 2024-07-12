@@ -1,6 +1,15 @@
-/*=============== VARIABLES SCSS ===============*/
+// Fuentes 
 
-/*-------- Background colors --------*/
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/Inter/Inter.ttf');
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
+
+// --------- VARIABLES SCSS --------//
+
+// Background colors 
 
 $body-color: #1A1A1A;
 $second-color-bg: #161616;
@@ -11,18 +20,18 @@ $shop-background: #01010142;
 $product-background: #2a2a2a3f;
 $second-button-background: #2A2A2A;
 
-/*-------- Border colors --------*/
+// Border colors
 
 $border-shadow: 5px solid rgba(16, 16, 16, 0.5);
 
-/*-------- text color --------*/
+//text color
 
 $main-text-color: #F1F1F1;
 $second-text-color: #F0F0F0;
 $main-color: #BE60F4;
 $copy-color: #A0A0A0;
 
-/*-------- form colors --------*/
+// form colors
 
 $form-background: #0A0A0A;
 $form-input-background: #1A1A1A;
@@ -31,13 +40,13 @@ $form-label: #FAFAFA;
 $form-input: #FAFAFA;
 $form-placeholder: #828282;
 
-/*-------- scroll bar colors --------*/
+//scroll bar colors 
 
 $scroll-bar-color: hsl(243, 12%, 38%);
 $scroll-thumb-color: hsl(244, 12%, 26%);
 $scroll-thumb-color-hover: hsl(245, 13%, 18%);
 
-/*-------- font size --------*/
+// font size
 
 $big-font: 3.5rem;
 $h1: 2.9rem;
@@ -48,18 +57,18 @@ $h5: 1.2rem;
 $p: 0.976rem; 
 $copy-text: 0.75rem;
 
-/*-------- font weight --------*/
+// font weight 
 
 $fw-400: 400;
 $fw-500: 500;
 $fw-600: 700;
 
-/* height nav */
+// height nav
 
 $header: 70px;
 
 
-/*========== VARIABLES SASS ===========*/
+// MediaQueary VARIABLES SASS 
 
 
 @media screen and (max-width: 768px) {

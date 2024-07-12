@@ -2,9 +2,9 @@
 =                                           Media Query                                                 =
 ========================================================================================================*/
 
-/*--------------------- MAX width ---------------------*/
+// MAX width 
 
-/*==================== For small devices ==================*/
+//For small devices
 
 @media screen and (max-width: 340px) {
 
@@ -20,12 +20,17 @@
     grid-template-columns: repeat(2, 40%);
     padding: 20px 20px;
   }
+  
+  .footer{
 
-  .footer__links {
-    margin: auto;
-    grid-template-columns: 1fr;
+    .footer__nav {
+
+      .footer__links {
+        margin: auto;
+        grid-template-columns: 1fr;
+      }
+    }
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -41,7 +46,7 @@
   }
 }
 
-/*--------------------- MIN width ---------------------*/
+// MIN width
 
 @media screen and (min-width: 340px) {
 
@@ -61,7 +66,7 @@
 }
 
 
-/*==================== For medium devices ==================*/
+// For medium devices 
 
 
 @media screen and (min-width: 768px) {
@@ -94,7 +99,7 @@
 
   /*============== Index Page Media =================*/
 
-  /*-------------- home container --------------*/
+  // home container 
 
   .home__container {
     position: relative;
@@ -128,13 +133,13 @@
     align-items: center;
   }
 
-  /*-------------- info styles  -----------------*/
+  // info styles
 
   .info__container {
     justify-content: space-between;
   }
 
-  /*-------------- concept styles --------------*/
+  // concept styles 
 
   .concept__container {
     display: flex;
@@ -163,9 +168,9 @@
     right: 0;
   }
 
-  /*---------------------------- LCD styles ----------------------------*/
+  // LCD styles 
 
-  /* lcd texts */
+  // lcd texts 
   .paragraph__button {
     width: 40%;
     display: none;
@@ -176,13 +181,13 @@
     width: 60%;
   }
 
-  /* lcd images */
+  // lcd images
 
   .interactive__images__container {
     height: 0;
   }
 
-  /*-------------- Sponsor styles  -----------------*/
+  // Sponsor styles 
 
   .sponsor__container {
     grid-template-columns: repeat(4, 15%);
@@ -190,7 +195,7 @@
 
   /*============== Info Page Media =================*/
 
-  /*---------------- info iframe ----------------*/
+  // info iframe 
 
   .video__info {
     display: flex;
@@ -213,7 +218,7 @@
     height: 200px;
   }
 
-  /*-------------- Performance Styles --------------*/
+  // Performance Styles 
 
   .performance__section {
     display: flex;
@@ -234,7 +239,7 @@
     max-width: 40%;
   }
 
-  /*--------------- table styles ---------------*/
+  // table styles
 
   .table__title__body,
   .table__foot__title {
@@ -249,30 +254,32 @@
 
   /*================= Footer =================*/
 
-  .footer__nav {
-    grid-template-columns: 300px 300px;
-    padding: 20px;
-    justify-content: space-between;
-  }
+  .footer{
+    .footer__nav {
+      grid-template-columns: 300px 300px;
+      padding: 20px;
+      justify-content: space-between;
+    
 
-  .footer__logo {
-    width: 100%;
-  }
+      .footer__logo {
+        width: 100%;
 
-  .footer__logo__img {
-    width: 20%;
-  }
+        .footer__logo__img {
+          width: 20%;
+        }
+      }
 
-  .footer__links {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    gap: 6rem;
-    justify-content: space-evenly;
+      .footer__links {
+        @include grid(repeat(2, max-content), 6rem);
+        justify-content: space-evenly;
+      }
+    }
   }
+  
 
 }
 
-/*==================== For Large devices ==================*/
+// For Large devices
 
 @media screen and (min-width: 992px) {
 
@@ -292,7 +299,7 @@
     height: 300px;
   }
 
-  /*-------------- Performance Styles --------------*/
+  // Performance Styles
 
   .performance__section {
     gap: 5rem;
@@ -304,7 +311,7 @@
 
   /*================== shop page styles ====================*/
 
-  /*---------------- form styles ----------------*/
+  // form styles
 
   .form__container {
     flex-direction: row;
@@ -325,7 +332,7 @@
     gap: 2rem;
   }
 
-  /* inputs containers */
+  // inputs containers 
 
   .contact-form .contact__group {
     flex-direction: row;
@@ -336,9 +343,9 @@
     flex: 0 0 45%;
   }
 
-  /*----------------- shop styles -------------------*/
+  // shop styles 
 
-  /* shop layout */
+  // shop layout 
 
   .shop__info {
     background-color: var(--shop--background);
@@ -357,7 +364,7 @@
     width: 90%;
   }
 
-  /* shop text */
+  // shop text 
 
   .shop__paragraph__info {
     font-size: 0.9rem;
@@ -368,7 +375,7 @@
     font-size: 2.2rem;
   }
 
-  /* Scroll up */
+  // Scroll up
 
   .scrollup {
     right: 3rem;
@@ -391,7 +398,7 @@
     height: 400px;
   }
 
-  /*-------------- Performance Styles --------------*/
+  // Performance Styles 
 
   .performance-img {
     flex: 0 0 100%;
@@ -405,7 +412,7 @@
     width: 80%;
   }
 
-  /*--------------- table styles ---------------*/
+  // table styles 
 
   .table__title__body,
   .table__foot__title {
