@@ -626,6 +626,95 @@ label {
   margin-bottom: 20px;
 }
 
+/*================== shop page styles ====================*/
+/*---------------- form styles ----------------*/
+/*----------------- shop styles -------------------*/
+.form__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-direction: column;
+  padding: 20px;
+}
+.form__container .shop__product {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-direction: column;
+}
+.form__container .shop__product .shop__info {
+  background-color: rgba(1, 1, 1, 0.2588235294);
+  display: grid;
+  gap: 2rem;
+  padding: 40px 30px 50px;
+}
+.form__container .shop__product .shop__info .product__title {
+  font-size: 2.2rem;
+}
+.form__container .shop__product .shop__info .product__container {
+  padding: 40px 10px;
+  background-color: rgba(42, 42, 42, 0.2470588235);
+}
+.form__container .shop__product .shop__info .product__container .img__product {
+  margin: auto;
+  width: 90%;
+}
+.form__container .contact__mail {
+  background-color: #0A0A0A;
+  width: 100%;
+  padding: 30px;
+  /* inputs containers */
+}
+.form__container .contact__mail .contact__title {
+  font-weight: bold;
+  margin: 20px 0;
+}
+.form__container .contact__mail .contact__title:last-of-type {
+  margin-bottom: 30px;
+}
+.form__container .contact__mail .user__form {
+  margin-bottom: 40px;
+}
+.form__container .contact__mail .contact-form .contact__group {
+  flex-direction: column;
+}
+.form__container .contact__mail .contact-form .contact__group .contact__box {
+  width: 100%;
+}
+.form__container .contact__mail .paid-form .contact__group .contact__box {
+  width: 30%;
+}
+.form__container .contact__mail .contact__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+.form__container .contact__mail .contact__box .contact__label {
+  margin: 10px 0 0 2px;
+}
+.form__container .contact__mail .contact__group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.form__container .contact__mail .contact__group .contact__label {
+  margin: 10px 0 0 2px;
+}
+.form__container .contact__mail .button__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 30px;
+  flex-direction: column;
+  transition: 0.4s;
+}
+
 /*=================== footer styles =================*/
 .footer {
   background-color: #161616;
@@ -982,17 +1071,17 @@ label {
     padding: 20px 0;
     gap: 1.5rem;
   }
-  .contact__mail {
+  .form__container .contact__mail {
     flex: 0 0 55%;
     max-width: 55%;
   }
-  .shop__product {
+  .form__container .contact__mail .contact-form .contact__group {
+    flex-direction: row;
+  }
+  .form__container .shop__product {
     flex: 0 0 40%;
     max-width: 40%;
     gap: 2rem;
-  }
-  .contact-form .contact__group {
-    flex-direction: row;
   }
   .contact-form .contact__group .contact__box {
     max-width: 45%;
